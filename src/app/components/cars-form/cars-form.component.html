@@ -1,0 +1,73 @@
+<form (ngSubmit)="addCars(newCar)">
+  <div class="form-group">
+	 <label for="mark">Mark</label>
+	  <input type="text"#mark="ngModel" [(ngModel)]="newCar.mark" name="mark" class="form-control">
+	 <label for="model">Model</label>
+	  <input type="text" #model="ngModel" [(ngModel)]="newCar.model" name="model" class="form-control">
+	  
+	<label for="year">Year:</label>
+        <select id="year" name="year" #year="ngModel" [(ngModel)]="newCar.year">
+            <option value="2007">2017</option>
+            <option value="2006">2016</option>
+            <option value="2005">2015</option>
+            <option value="2004">2014</option>
+            <option value="2003">2013</option>
+            <option value="2002">2012</option>
+            <option value="2001">2011</option>
+            <option value="2000">2010</option>
+            <option value="1999">2009</option>
+            <option value="1998">2008</option>
+            <option value="2007">2007</option>
+            <option value="2006">2006</option>
+            <option value="2005">2005</option>
+            <option value="2004">2004</option>
+            <option value="2003">2003</option>
+            <option value="2002">2002</option>
+            <option value="2001">2001</option>
+            <option value="2000">2000</option>
+            <option value="1999">1999</option>
+            <option value="1998">1998</option>
+            <option value="1997">1997</option>
+            <option value="1996">1996</option>
+            <option value="1995">1995</option>
+            <option value="1994">1994</option>
+            <option value="1993">1993</option>
+            <option value="1992">1992</option>
+            <option value="1991">1991</option>
+            <option value="1990">1990</option>
+        </select> 
+
+	  <label for="maxSpeed">Max Speed</label>
+	  	<input type="number" #maxSpeed="ngModel" [(ngModel)]="newCar.maxSpeed" name="maxSpeed" class="form-control">
+	  
+	  <label for="numberOfDoors">Number Of Doors</label>
+	  	<input type="number" #maxSpeed="ngModel" [(ngModel)]="newCar.maxSpeed" name="maxSpeed" class="form-control"/>
+
+	  <div>
+	  	Is this car automatic?
+		<div class="form-check form-check-inline">
+			<label for="isAutomatic">
+			  <input type="radio" #isAutomatic="ngModel" [(ngModel)]="newCar.isAutomatic" name="isAutomatic" class="form-control">Yes</label>
+		</div>
+		<div class="form-check form-check-inline">
+			<label for="isAutomatic">
+			   <input type="radio" #isAutomatic="ngModel" [(ngModel)]="newCar.isAutomatic" name="isAutomatic" class="form-control">No</label>
+		</div>
+	  </div>	
+		<div class="btn-group" data-toggle="buttons">
+		  <label for="engine">
+		    <input type="radio" #engine="ngModel" [(ngModel)]="newCar.engine" autocomplete="off"> Diesel
+		  </label>
+		  <label for="engine">
+		    <input type="radio" #engine="ngModel" [(ngModel)]="newCar.engine" autocomplete="off"> Petrol
+		  </label>
+		  <label for="engine">
+		    <input type="radio" #engine="ngModel" [(ngModel)]="newCar.engine" autocomplete="off"> Electric
+		  </label>
+		  <label for="engine">
+		    <input type="radio" #engine="ngModel" [(ngModel)]="newCar.engine" autocomplete="off"> Hybrid
+		  </label>
+		</div>
+  <button type="submit" (click)="addCars(newCar)" class="btn btn-primary"> Add </button>
+ </div> 
+</form>
